@@ -8,8 +8,24 @@ import DynamicTitle from '../components/DynamicTitle.vue'
 	<p>
 	  Make famdom reignite with
 	  <br />
-	  <DynamicTitle client:idle />
+	  <span class="dynamic-title"><DynamicTitle client:idle /></span>
+	  <span class="cursor">_</span>
 	  <br />
 	  in our hands
 	</p>
 </Layout>
+
+<style>
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+.dynamic-title {
+  font-size: 1.2rem;
+}
+</style>
