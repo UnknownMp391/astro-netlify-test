@@ -1,8 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import DynamicTitle from '../components/DynamicTitle.vue'
 ---
 
 <Layout>
-	<h1>Title H1</h1>
-	<p>测试段落</p>
+	<h1>动态打字机测试</h1>
+	<p>
+	  Make famdom reignite with
+	  <br />
+	  <DynamicTitle client:idle />
+	  <br />
+	  in our hands
+	</p>
 </Layout>
